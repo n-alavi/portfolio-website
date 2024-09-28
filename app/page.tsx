@@ -1,9 +1,13 @@
-import Image from "next/image";
+import About from "./components/about";
+import Intro from "./components/intro";
+import Navbar from "./components/navbar";
 
 export default function Home() {
   return (
-    <div>
-      <h2>start portfolio</h2>
+    <div className="flex flex-col items-center">
+      <Navbar />
+      <Intro />
+      <About />
     </div>
   );
 }
