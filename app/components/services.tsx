@@ -74,7 +74,7 @@ export default function Services() {
             <h3 className="text-xl font-semibold text-gray-800 text-center">
               {service.name}
             </h3>
-            <p className="text-gray-600 mt-2 text-center">
+            <p className="text-gray-600 mt-2 text-center text-sm">
               {service.description}
             </p>
           </div>
