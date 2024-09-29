@@ -3,6 +3,8 @@
 import Image from "next/image";
 import ProfilePic from "../assets/profile.svg";
 import { motion } from "framer-motion";
+import Link from "next/link";
+
 export default function Intro() {
   return (
     <div>
@@ -62,6 +64,17 @@ export default function Intro() {
             من است.
           </span>
         </h1>
+
+        <div className="flex  mb-6 justify-center">
+          <Link href="#contact">
+            <button
+              className="bg-gray-500 text-white py-2 px-4 mt-8 rounded-md shadow hover:bg-gray-800 transition"
+              style={{ alignSelf: "flex-start" }}
+            >
+              ارتباط با من
+            </button>
+          </Link>
+        </div>
       </motion.div>
     </div>
   );

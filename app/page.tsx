@@ -1,4 +1,5 @@
 import About from "./components/about";
+import Contact from "./components/contact";
 import Intro from "./components/intro";
 import Navbar from "./components/navbar";
 import Projects from "./components/project";
@@ -14,6 +15,7 @@ export default function Home() {
       <SkillsCard />
       <Services />
       <Projects />
+      <Contact />
     </div>
   );
 }
