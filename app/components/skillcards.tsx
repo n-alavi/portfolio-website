@@ -57,7 +57,7 @@ export default function SkillsCard() {
       transition={{ delay: 0.35 }}
       id="skills"
     >
-      <section className=" px-4 max-w-5xl mx-auto">
+      <div className=" px-4 max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">مهارت ها </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill, index) => (
@@ -77,7 +77,7 @@ export default function SkillsCard() {
             </div>
           ))}
         </div>
-      </section>
+      </div>
     </motion.section>
   );
 }
