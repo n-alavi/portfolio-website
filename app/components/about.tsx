@@ -19,32 +19,8 @@ export default function About() {
       </h1>
       <div className="flex flex-col md:flex-row gap-4">
         {/*  Column 1 */}
-        <div className="flex-1 p-4">
-          <Image
-            src={AboutImage}
-            alt="about me image"
-            width={400}
-            height={400}
-            priority={true}
-            className="rounded border-none shadow-md"
-          />
-          <h2 className="text-lg font-bold mt-2">فاطمه علوی</h2>
-          <div className="flex flex-col gap-2 mt-4">
-            {/* Phone Section */}
-            <div className="flex items-center gap-2">
-              <FaPhone className="text-slate-500 text-xl" />
-              <span className="text-slate-700">09169346800</span>
-            </div>
-            {/* Email Section */}
-            <div className="flex items-center gap-2">
-              <FaEnvelope className="text-slate-500 text-xl" />
-              <span className="text-slate-700">Alavi_n70@yahoo.com</span>
-            </div>
-          </div>
-        </div>
 
-        {/* <!-- Column 2 --> */}
-        <div className="flex-1 p-4">
+        <div className="flex-1 p-4 text-right">
           <p>
             پس از فارغ‌التحصیلی در رشته مهندسی فناوری اطلاعات، سفری به دنیای وب
             را آغاز کردم و از آن زمان تا کنون با علاقه‌ی زیادی به یادگیری و
@@ -54,6 +30,30 @@ export default function About() {
             علاقه‌مندم و همواره در تلاش هستم تا با استفاده از بهترین روش‌ها،
             تجربه کاربری را بهبود بخشم.
           </p>
+        </div>
+        {/* <!-- Column 2 --> */}
+        <div className="flex-1 p-4">
+          <Image
+            src={AboutImage}
+            alt="about me image"
+            width={400}
+            height={400}
+            priority={true}
+            className="rounded border-none shadow-md"
+          />
+          <h2 className="text-lg font-bold mt-2 text-center">فاطمه علوی</h2>
+          <div className="flex flex-col gap-2 mt-4 ">
+            {/* Phone Section */}
+            <div className="flex items-center gap-2 justify-center ">
+              <span className="text-slate-700 ">09169346800</span>
+              <FaPhone className="text-slate-500 text-xl" />
+            </div>
+            {/* Email Section */}
+            <div className="flex items-center gap-2 justify-center">
+              <span className="text-slate-700">Alavi_n70@yahoo.com</span>
+              <FaEnvelope className="text-slate-500 text-xl" />
+            </div>
+          </div>
         </div>
       </div>
     </motion.section>
