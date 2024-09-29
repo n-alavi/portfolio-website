@@ -52,6 +52,7 @@ export default function Intro() {
         className="leading-[1.5] mb-10  px-4 text-xl font-medium sm:text-2xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
+        id="intro"
       >
         <h4 className="mt-4 text-2xl font-medium">سلام</h4>
         <h1 className="mt-4">
