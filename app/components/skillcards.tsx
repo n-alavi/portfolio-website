@@ -1,52 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiTypescript } from "react-icons/si";
 
-const skills = [
-  {
-    name: "HTML",
-    icon: <FaHtml5 className="text-orange-500 text-4xl" />,
-    description: "Markup language used for structuring and presenting content.",
-  },
-  {
-    name: "CSS",
-    icon: <FaCss3Alt className="text-blue-500 text-4xl" />,
-    description:
-      "Styling language used for designing visually engaging web pages.",
-  },
-  {
-    name: "JavaScript",
-    icon: <FaJs className="text-yellow-500 text-4xl" />,
-    description:
-      "Programming language for creating dynamic and interactive content.",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: <SiTailwindcss className="text-teal-500 text-4xl" />,
-    description:
-      "Utility-first CSS framework for rapidly building modern designs.",
-  },
-  {
-    name: "React",
-    icon: <FaReact className="text-blue-400 text-4xl" />,
-    description:
-      "JavaScript library for building user interfaces with components.",
-  },
-  {
-    name: "Next.js",
-    icon: <SiNextdotjs className="text-black text-4xl" />,
-    description:
-      "React framework for server-side rendering and building full-stack applications.",
-  },
-  {
-    name: "TypeScript",
-    icon: <SiTypescript className="text-blue-600 text-4xl" />,
-    description:
-      "Superset of JavaScript adding static types for enhanced development.",
-  },
-];
+import { skills } from "../constant/data";
 
 export default function SkillsCard() {
   return (

@@ -1,53 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  FaGlobe,
-  FaMobileAlt,
-  FaBolt,
-  FaPaintBrush,
-  FaRocket,
-  FaLink,
-} from "react-icons/fa"; // Importing icons from react-icons
-
-const services = [
-  {
-    icon: <FaGlobe className="text-5xl text-pink-500" />, // Replacing emoji with icon
-    name: "توسعه وبسایت شخصی",
-    description:
-      "من وبسایت های کاملا سفارشی سازی شده با استفاده از فناوری های مدرن با تضمین عملکرد، امنیت و تجربه ای منحصر به فرد ایجاد میکنم.",
-  },
-  {
-    icon: <FaMobileAlt className="text-5xl text-pink-500" />,
-    name: " طراحی وبسایت ریسپانسیو",
-    description:
-      " با ارائه یک تجربه کاربری بهینه وبسایت شما در همه دستگاه ها و صفحه نمایش ها عالی به نظر می رسد.",
-  },
-  {
-    icon: <FaBolt className="text-5xl text-pink-500" />,
-    name: "اپلیکیشن های تک صفحه ای",
-    description: "ساخت برنامه های تک صفحه ای پویا، مقیاس پذیر و سریع",
-  },
-  {
-    icon: <FaPaintBrush className="text-5xl text-pink-500" />,
-    name: "طراحی تجربه کاربری و رابط کاربری",
-    description:
-      "پیاده سازی دقیق طرح های کاربر پسند با اطمینان از قابلیت استفاده و دسترسی",
-  },
-  {
-    icon: <FaRocket className="text-5xl text-pink-500" />,
-    name: "بهینه سازی وبسایت",
-    description:
-      "بهبود سرعت، سئو و عملکرد کلی وبسایت شما به وسیله بهینه سازی کد برای تجربه کاربری بهتر",
-  },
-  {
-    icon: <FaLink className="text-5xl text-pink-500" />,
-    name: "یکپارچه سازی API",
-    description:
-      "یکپارچه سازی API برای ارائه محتوای پویا و خدمات به وبسایت شما",
-  },
-];
-
+import { services } from "../constant/data";
 export default function Services() {
   return (
     <motion.div
