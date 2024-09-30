@@ -2,15 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
+const vazir = localFont({
   src: "./fonts/Vazir.woff2",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/Vazir.woff2",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,10 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} relative bg-gray-50 pt-28 text-gray-950 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 `}
-      >
+    <html lang="fa" dir="rtl" className={vazir.className}>
+      <body className="relative">
         {/* gradient background effect */}
 
         <div className="absolute right-[11rem] top-[-6rem] -z-10 h-[31.25 rem] w-[31.25rem] ounded-full bg-[#fbe2e3] blur-[10rem]  sm:w-[68.75rem]"></div>
