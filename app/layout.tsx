@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl" className={vazir.className}>
-      <body className="relative">
+      <body className="relative  overflow-x-hidden">
         {/* gradient background effect */}
 
         <div className="absolute right-[11rem] top-[-6rem] -z-10 h-[31.25 rem] w-[31.25rem] ounded-full bg-[#fbe2e3] blur-[10rem]  sm:w-[68.75rem]"></div>

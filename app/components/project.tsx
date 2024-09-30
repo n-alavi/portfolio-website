@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function Projects() {
   return (
     <motion.div
-      className="leading-[1.5] mb-10  px-4 text-xl font-medium sm:text-2xl"
+      className="mb-28 mt-20 w-full max-w-[45rem] scroll-mt-28 px-4 sm:mb-40"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       id="projects"
