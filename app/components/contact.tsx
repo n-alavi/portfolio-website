@@ -29,7 +29,7 @@ export default function Contact() {
         <input
           name="sender-email"
           id="email"
-          className="rounded-sm border border-black/10 px-4 py-2  
+          className="rounded-sm border border-black/10 px-4 py-2 mx-2 
           bg-opacity-80 "
           type="email"
           placeholder="ایمیل خود را وارد کنید"
@@ -42,7 +42,7 @@ export default function Contact() {
           cols={30}
           rows={10}
           placeholder="پیغام..."
-          className="mb-4 h-52 rounded-sm border border-black/5 p-4  
+          className="mb-4 h-52 rounded-sm border border-black/5 p-4  mx-2
           bg-opacity-80 "
           required
           maxLength={5000}
@@ -50,7 +50,7 @@ export default function Contact() {
 
         <button
           type="submit"
-          className="mt-4 rounded-md bg-purple-100  py-1 px-2 text-gray-600 font-semibold hover:from-purple-200 hover:to-purple-100 focus:outline-none focus:ring-2 focus:ring-purple-300 dark:bg-gradient-to-r size-25 "
+          className="mt-4 rounded-md bg-purple-100  py-1 px-2 mx-2 text-gray-600 font-semibold hover:from-purple-200 hover:to-purple-100 focus:outline-none focus:ring-2 focus:ring-purple-300 dark:bg-gradient-to-r size-25 "
           style={{ alignSelf: "flex-end" }}
         >
           ارسال پیام
