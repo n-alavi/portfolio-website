@@ -90,3 +90,12 @@ export const skills = [
       "Superset of JavaScript adding static types for enhanced development.",
   },
 ];
+
+export const navLinks = [
+  { href: "#intro", label: "خانه" },
+  { href: "#about", label: "درباره من" },
+  { href: "#skills", label: "مهارت ها" },
+  { href: "#services", label: "خدمات" },
+  { href: "#projects", label: "پروژه ها" },
+  { href: "#contact", label: "تماس با ما" },
+];
