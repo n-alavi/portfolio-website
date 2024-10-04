@@ -4,14 +4,21 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import AboutImage from "../assets/about.jpg";
 import { FaPhone, FaEnvelope } from "react-icons/fa";
+import useInViewAnimation from "../custom hook/useInViewAnimation";
 
 export default function About() {
+  const { ref, controls } = useInViewAnimation({
+    threshold: 0.3,
+    triggerOnce: false,
+  }); // Use the hook
+
   return (
     <motion.section
       className="mb-28 mt-20 max-w-[45rem] scroll-mt-28 px-4 leading-7"
       initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
+      animate={controls}
+      transition={{ duration: 0.8, ease: "easeOut" }} // Adjust timing and easing
+      ref={ref} // Attach the ref to the section to observe
       id="about"
     >
       <h1 className="text-center text-3xl font-bold text-gray-800 mb-8">

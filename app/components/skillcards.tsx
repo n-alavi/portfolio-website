@@ -1,16 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import useInViewAnimation from "../custom hook/useInViewAnimation";
 import { skills } from "../constant/data";
 
 export default function SkillsCard() {
+  const { ref, controls } = useInViewAnimation({
+    threshold: 0.3,
+    triggerOnce: false,
+  }); // Use the hook
+
   return (
     <motion.section
       className="mb-28 mt-20 w-full max-w-[45rem] scroll-mt-28 px-4 sm:mb-40"
       initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.35 }}
+      animate={controls}
+      transition={{ duration: 0.8, ease: "easeOut" }} // Adjust timing and easing
+      ref={ref} // Attach the ref to the section to observe
       id="skills"
     >
       <div className=" px-4 max-w-5xl mx-auto">

@@ -2,22 +2,22 @@
 
 import { motion } from "framer-motion";
 import React, { FormEvent } from "react";
+import useInViewAnimation from "../custom hook/useInViewAnimation";
 
 export default function Contact() {
+  const { ref, controls } = useInViewAnimation({
+    threshold: 0.3,
+    triggerOnce: false,
+  }); // Use the hook
+
   return (
     <motion.section
       id="contact"
       className="mb-20 mt-20 w-[min(100%,38rem)] scroll-mt-28 sm:mb-28 sm:ml-6"
       initial={{ opacity: 0 }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
+      animate={controls}
+      transition={{ duration: 0.8, ease: "easeOut" }} // Adjust timing and easing
+      ref={ref} // Attach the ref to the section to observe
     >
       <h1 className="text-3xl font-bold text-center mb-8">ارتباط با من </h1>
 
