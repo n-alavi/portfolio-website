@@ -39,30 +39,16 @@ export default function About() {
               بهترین روش‌ها، تجربه کاربری را بهبود بخشم.
             </p>
           </div>
-          {/* <!-- Column 2 --> */}
-          <div className="flex-1 p-4">
+          {/* <div className="flex p-4 ">
             <Image
               src={AboutImage}
               alt="about me image"
               width={400}
               height={400}
               priority={true}
-              className="rounded border-none shadow-md"
+              className="flex rounded border-none shadow-md items-center justify-center"
             />
-            <h2 className="text-lg font-bold mt-2 text-center">فاطمه علوی</h2>
-            <div className="flex flex-col gap-2 mt-4 ">
-              {/* Phone Section */}
-              <div className="flex items-center gap-2 justify-center ">
-                <span className="text-slate-700 ">09169346800</span>
-                <FaPhone className="text-slate-500 text-xl" />
-              </div>
-              {/* Email Section */}
-              <div className="flex items-center gap-2 justify-center">
-                <span className="text-slate-700">Alavi_n70@yahoo.com</span>
-                <FaEnvelope className="text-slate-500 text-xl" />
-              </div>
-            </div>
-          </div>
+          </div> */}
         </div>
       </motion.section>
     </div>
