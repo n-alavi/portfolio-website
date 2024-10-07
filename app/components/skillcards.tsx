@@ -13,7 +13,7 @@ export default function SkillsCard() {
   return (
     <div id="skills">
       <motion.section
-        className="mb-28 mt-20 w-full max-w-[45rem] scroll-mt-28 px-4 sm:mb-40"
+        className="mb-28 mt-20 w-full scroll-mt-28 sm:mb-40"
         initial={{ opacity: 0, y: 100 }}
         animate={controls}
         transition={{ duration: 0.8, ease: "easeOut" }} // Adjust timing and easing

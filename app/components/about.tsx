@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import AboutImage from "../assets/about.jpg";
-import { FaPhone, FaEnvelope } from "react-icons/fa";
+// import Image from "next/image";
+// import AboutImage from "../assets/about.jpg";
+// import { FaPhone, FaEnvelope } from "react-icons/fa";
 import useInViewAnimation from "../custom hook/useInViewAnimation";
 
 export default function About() {
@@ -15,7 +15,7 @@ export default function About() {
   return (
     <div id="about" className="flex items-center">
       <motion.section
-        className="mb-28 mt-20 max-w-[45rem] scroll-mt-28 px-4 leading-7"
+        className="mb-28 mt-20 scroll-mt-28 leading-7"
         initial={{ opacity: 0, y: 100 }}
         animate={controls}
         transition={{ duration: 0.8, ease: "easeOut" }} // Adjust timing and easing

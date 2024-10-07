@@ -9,7 +9,7 @@ import SkillsCard from "./components/skillcards";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center md:items-center  ">
+    <div className="flex flex-col max-w-screen-sm">
       <Navbar />
       <Intro />
       <About />

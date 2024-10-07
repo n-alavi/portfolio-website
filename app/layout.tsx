@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl" className={vazir.className}>
-      <body className=" max-w-screen-lg mx-auto bg-[#FFF8E8] ">{children}</body>
+      <body className=" max-w-screen-sm mx-auto bg-[#FFF8E8] ">{children}</body>
     </html>
   );
 }
