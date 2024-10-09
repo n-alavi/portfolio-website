@@ -26,7 +26,7 @@ export const options = {
 
         const user = {
           id: "11",
-          fullname: "",
+          name: "",
           username: "reza",
           password: "123456",
         };
