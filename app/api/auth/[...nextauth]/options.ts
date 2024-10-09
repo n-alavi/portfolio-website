@@ -26,7 +26,7 @@ export const options = {
 
         const user = {
           id: "11",
-          name: "",
+          name: " رضا دوایی",
           username: "reza",
           password: "123456",
         };
@@ -42,4 +42,9 @@ export const options = {
       },
     }),
   ],
+
+  pages: {
+    signIn: "/auth/login",
+    signOut: "/auth/signout",
+  },
 };
