@@ -3,13 +3,14 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { log } from "console";
 
 export default function LoginPage() {
   const router = useRouter();
+  const { data: session } = useSession(); // Check user session
   const [error, setError] = useState("");
 
   const username = useRef("");
@@ -17,6 +18,13 @@ export default function LoginPage() {
 
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") || "/dashboard";
+
+  // Redirect if already logged in
+  useEffect(() => {
+    if (session) {
+      router.push(callbackUrl);
+    }
+  }, [session, router, callbackUrl]);
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
