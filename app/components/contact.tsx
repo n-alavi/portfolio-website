@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React, { FormEvent } from "react";
 import useInViewAnimation from "../custom hook/useInViewAnimation";
 
 export default function Contact() {

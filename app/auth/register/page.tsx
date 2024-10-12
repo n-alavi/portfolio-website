@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useRef, useState } from "react";
+// import { useRouter } from "next/navigation";
+import { useRef } from "react";
 
 export default function RegisterPage() {
-  const router = useRouter();
+  // const router = useRouter();
 
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
 
   const fullname = useRef("");
   const username = useRef("");
@@ -57,11 +57,11 @@ export default function RegisterPage() {
               ثبت نام کنید
             </h1>
             <form className="space-y-4 md:space-y-6" onSubmit={onSubmit}>
-              {error && (
+              {/* {error && (
                 <p className="text-center bg-red-300 py-4 mb-6 rounded">
                   {error}
                 </p>
-              )}
+              )} */}
               <div>
                 <label
                   htmlFor="fullname"

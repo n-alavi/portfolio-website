@@ -1,17 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { signIn, useSession } from "next-auth/react";
-import { log } from "console";
 
 export default function LoginPage() {
   const router = useRouter();
   const { data: session } = useSession(); // Check user session
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
 
   const username = useRef("");
   const password = useRef("");
@@ -46,12 +44,13 @@ export default function LoginPage() {
       if (!result?.error) {
         router.push(callbackUrl);
       } else {
-        setError("نام کاربری یا کلمه عبور اشتباه است");
+        // setError("نام کاربری یا کلمه عبور اشتباه است");
       }
-    } catch (err: any) {
-      setError(err.message || String(err));
+    } catch (err: unknown) {
+      console.log("error: ", err);
     }
   };
+
   return (
     <>
       <section className="bg-gray-50 dark:bg-gray-900">
@@ -62,11 +61,11 @@ export default function LoginPage() {
                 وارد اکانت خود شوید
               </h1>
               <form className="space-y-4 md:space-y-6" onSubmit={onSubmit}>
-                {error && (
+                {/* {error && (
                   <p className="text-center bg-red-300 py-4 mb-6 rounded">
                     {error}
                   </p>
-                )}
+                )} */}
                 <div>
                   <label
                     htmlFor="username"
