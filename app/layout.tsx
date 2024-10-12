@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import AuthProvider from "./AuthProvider";
 
 const vazir = localFont({
   src: "./fonts/Vazir.woff2",
@@ -20,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl" className={vazir.className}>
-      <body className=" max-w-screen-sm mx-auto bg-[#FFF8E8] ">
-        <AuthProvider>{children}</AuthProvider>
-      </body>
+      <body className=" max-w-screen-sm mx-auto bg-[#FFF8E8] ">{children}</body>
     </html>
   );
 }
