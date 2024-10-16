@@ -9,13 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "firebase": "^10.14.1",
     "framer-motion": "^11.9.0",
+    "input-otp": "^1.2.4",
+    "lucide-react": "^0.453.0",
     "next": "^14.2.15",
     "next-auth": "^4.24.8",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.3.0",
-    "react-intersection-observer": "^9.13.1"
+    "react-intersection-observer": "^9.13.1",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^22.7.5",
