@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import { getServerSession } from "next-auth";
 
 import { NoUser, ThereIsUser } from "../components/DashboardPageComponents";

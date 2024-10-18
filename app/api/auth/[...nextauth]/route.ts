@@ -1,61 +1,62 @@
-import prisma from "@/app/libs/prisma"; // Ensure you have a default export for your Prisma client
+import Prisma from "@/app/libs/prisma";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import { User } from "@prisma/client";
 import NextAuth, { NextAuthOptions } from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
+import CredentialProvider from "next-auth/providers/credentials";
 
 export const authOptions: NextAuthOptions = {
-  adapter: PrismaAdapter(prisma),
+  adapter: PrismaAdapter(Prisma),
   secret: process.env.NEXTAUTH_SECRET,
   providers: [
-    CredentialsProvider({
-      name: "Credentials",
+    CredentialProvider({
+      name: "credentails",
       credentials: {
         phone: {
-          label: "Phone",
+          label: "phone",
           type: "text",
-          placeholder: "Enter your phone number",
         },
       },
-      async authorize(credentials) {
-        if (!credentials?.phone) return null;
 
-        const user = await prisma.user.findUnique({
-          where: { phone: credentials.phone },
+      async authorize(credentails) {
+        if (!credentails?.phone) return null;
+
+        const user = await Prisma.user.findUnique({
+          where: { phone: credentails.phone },
         });
 
         if (!user) return null;
 
-        return user; // Return user object if found
+        return user;
       },
     }),
   ],
   callbacks: {
-    session({ session, token }) {
-      // Use token information if needed
+    session: ({ session }) => {
       return {
         ...session,
         user: {
           ...session.user,
-          // Include additional properties if needed from token (like phone)
+          // phone: token.phone,
         },
       };
     },
-    jwt({ token, user }) {
+    jwt: ({ token, user }) => {
+      const u = user as unknown as User;
       if (user) {
-        // Here you can include additional user properties in the token
         return {
           ...token,
-          // phone: user.phone, // If phone is a field in the user returned
+          // phone: u.phone,
         };
       }
-      return token; // Return the unchanged token if no user is present
+
+      return token;
     },
   },
   session: {
     strategy: "jwt",
   },
   pages: {
-    signIn: "/", // Define your custom sign-in page
+    signIn: "/",
   },
   debug: process.env.NODE_ENV === "development",
 };
