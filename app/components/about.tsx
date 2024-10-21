@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 // import Image from "next/image";
 // import AboutImage from "../assets/about.jpg";
 // import { FaPhone, FaEnvelope } from "react-icons/fa";
-import useInViewAnimation from "../custom hook/useInViewAnimation";
+import useInViewAnimation from "../hooks/useInViewAnimation";
 
 export default function About() {
   const { ref, controls } = useInViewAnimation({

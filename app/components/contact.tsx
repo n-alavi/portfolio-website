@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import useInViewAnimation from "../custom hook/useInViewAnimation";
+import useInViewAnimation from "../hooks/useInViewAnimation";
 
 export default function Contact() {
   const { ref, controls } = useInViewAnimation({

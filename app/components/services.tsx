@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { services } from "../constant/data";
-import useInViewAnimation from "../custom hook/useInViewAnimation";
+import useInViewAnimation from "../hooks/useInViewAnimation";
 
 export default function Services() {
   const { ref, controls } = useInViewAnimation({

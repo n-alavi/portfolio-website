@@ -1,7 +1,6 @@
 // pages/api/auth/requestCode.js
-import connectDB from "../../../../db";
-import User from "../../models/user";
-import { sendSmsCode } from "../../smsServices";
+import connectDB from "@/app/database/db";
+import User from "@/app/database/models/user";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 const generateCode = () =>
@@ -29,7 +28,7 @@ export default async function handler(
       await newUser.save();
     }
 
-    await sendSmsCode(phoneNumber, verificationCode);
+    // await sendSmsCode(phoneNumber, verificationCode);
 
     res.status(200).json({ message: "Code sent" });
   } else {

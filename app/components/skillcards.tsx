@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import useInViewAnimation from "../custom hook/useInViewAnimation";
+import useInViewAnimation from "../hooks/useInViewAnimation";
 import { skills } from "../constant/data";
 
 export default function SkillsCard() {
