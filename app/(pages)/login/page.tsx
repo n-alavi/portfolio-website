@@ -75,26 +75,36 @@ export default function Login() {
   };
 
   // Function to verify the code
-  const verifyCode = async () => {
-    try {
-      const res = await fetch("/api/auth/verifyCode", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ phoneNumber, code }),
-      });
+  // const verifyCode = async () => {
+  //   try {
+  //     const res = await fetch("/api/auth/verifyCode", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({ phoneNumber, code }),
+  //     });
 
-      const data = await res.json();
+  //     const data = await res.json();
 
-      if (res.ok) {
-        // If the response is OK (status 200), redirect to dashboard
-        setMessage("Code verified successfully!");
-        router.push("/dashboard"); // Redirect to the dashboard page
-      } else {
-        // Show error message if the code is invalid
-        setMessage(data.message || "Invalid verification code");
-      }
-    } catch (error) {
-      setMessage("Something went wrong, please try again.");
+  //     if (res.ok) {
+  //       // If the response is OK (status 200), redirect to dashboard
+  //       setMessage("Code verified successfully!");
+  //       router.push("/dashboard"); // Redirect to the dashboard page
+  //     } else {
+  //       // Show error message if the code is invalid
+  //       setMessage(data.message || "Invalid verification code");
+  //     }
+  //   } catch (error) {
+  //     setMessage("Something went wrong, please try again.");
+  //   }
+  // };
+  const verifyCode = () => {
+    if (code === generatedCode) {
+      // If the entered code matches the generated code
+      setMessage("Code verified successfully!");
+      router.push("/dashboard"); // Redirect to the dashboard page
+    } else {
+      // Show error message if the code is invalid
+      setMessage("Invalid verification code");
     }
   };
 
