@@ -1,6 +1,6 @@
 // pages/api/auth/verifyCode.tsx
-import connectDB from "../../db";
-import User from "../(authentication)/models/user";
+import connectDB from "@/app/database/db";
+import User from "@/app/database/models/user";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
